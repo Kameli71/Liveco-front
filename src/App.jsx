@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import CardList from './components/cards/CardList';
 import NavBar from './components/navbar/NavBar';
-import CardsLvl from './components/cardsfilter/CardsLvl';
-import CardsFilter from './components/cardsfilter/CardsFilter';
+import CardsRank from './components/cardsrank/CardsRank';
+import CardsFilter from './components/cardsrank/CardsFilter';
 import './App.css';
 
 
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/saints" element={<CardList />}/>
-        <Route path="/rank" element={<CardsLvl />}/>
+        <Route path="/rank" element={<CardsRank />}/>
         <Route path="/rank/:level" element={<CardsFilter />}/>
       </Routes>
     </div>

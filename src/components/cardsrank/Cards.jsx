@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './CardsLvlFilter.css'
+import './Cards.css'
 
-const CardsLvlFilter = ({ card }) => {
+const Cards = ({ card }) => {
   return (
-  <div className='CardsLvlFilter'>
+  <div className='Cards'>
       <Link to={{ pathname: `/rank/${card.level}` }}>
-      <div className="CardsLvlFilter-container">
+      <div className="cards-container">
        <span>{card.level}</span>
       </div>
       </Link>
@@ -14,4 +14,4 @@ const CardsLvlFilter = ({ card }) => {
     );
 };
 
-export default CardsLvlFilter;
+export default Cards;

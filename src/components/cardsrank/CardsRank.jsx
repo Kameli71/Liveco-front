@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import CardsLvlFilter from './CardsLvlFilter'
+import Cards from './Cards'
 import axios from 'axios';
-import './CardsFilter'
+import './CardsRank'
 
-const CardsLvl = () => {
+const CardsRank = () => {
     const [cards, setCards] = useState([]);
 
     
@@ -15,8 +15,8 @@ const CardsLvl = () => {
   }, []);
 
   return (
-  <div className='CardsLvl'>
-      <div className="cardsLvl-container">
+  <div className='CardsRank'>
+      <div className="cardsRank-container">
         {cards &&
         cards
         .filter((card, id, self) =>
@@ -26,7 +26,7 @@ const CardsLvl = () => {
         )
         .map((card) =>
       <div key={card.id}>
-        <CardsLvlFilter card={card} />
+        <Cards card={card} />
       </div>
       )}
       </div>
@@ -34,4 +34,4 @@ const CardsLvl = () => {
     );
 };
 
-export default CardsLvl;
+export default CardsRank;
